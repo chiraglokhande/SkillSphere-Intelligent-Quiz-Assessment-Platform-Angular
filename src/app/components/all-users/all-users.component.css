@@ -1,0 +1,129 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 90%;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+  color: #1e3a8a;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.table thead {
+  background: #1e3a8a;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:hover {
+  background: rgba(30, 58, 138, 0.1);
+  transition: 0.3s;
+}
+
+.table th {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Edit Button */
+.btn-edit {
+  background: #0d9488;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #0f766e;
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+.btn-delete {
+  background: #e11d48;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #be123c;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table, .table thead, .table tbody, .table th, .table td, .table tr {
+      display: block;
+      width: 100%;
+  }
+
+  .table tr {
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      background: white;
+  }
+
+  .table th {
+      display: none;
+  }
+
+  .table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border: none;
+  }
+
+  .table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #1e3a8a;
+  }
+
+  .btn {
+      width: 100%;
+      margin-top: 5px;
+  }
+}

@@ -1,0 +1,39 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All-Users</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">User Information</h2>
+
+    <table class="table custom-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.password}}</td>
+                <td>
+                  <button class="btn btn-edit" [routerLink]="['/edit-users',user.username]">Edit</button>
+                  <button class="btn btn-delete ms-2" (click)="deleteUser(user.username)" *ngIf="user.username!=='admin'">Delete</button>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

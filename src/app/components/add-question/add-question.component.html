@@ -1,0 +1,57 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add MCQ Question</title>
+
+
+</head>
+<body>
+
+  <div class="card">
+    <h2>Add MCQ Question</h2>
+
+    <!-- Question Input -->
+    <label for="question">Question</label>
+    <input type="text" id="question" class="form-control" [(ngModel)]="Question.question">
+
+    <!-- Options -->
+    <label for="a">Option A</label>
+    <input type="text" id="Question.a" class="form-control" [(ngModel)]="Question.a">
+
+    <label for="b">Option B</label>
+    <input type="text" id="Question.b" class="form-control" [(ngModel)]="Question.b">
+
+    <label for="c">Option C</label>
+    <input type="text" id="Question.c" class="form-control" [(ngModel)]="Question.c">
+
+    <label for="d">Option D</label>
+    <input type="text" id="Question.d" class="form-control" [(ngModel)]="Question.d">
+
+    <!-- Answer Selection -->
+    <label>Select Correct Answer:</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="correctAnswer" id="answerA" value="{{Question.a}}" [(ngModel)]="Question.answer">
+      <label class="form-check-label" for="answerA">A</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="correctAnswer" id="answerB" value="{{Question.b}}" [(ngModel)]="Question.answer">
+      <label class="form-check-label" for="answerB">B</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="correctAnswer" id="answerC" value="{{Question.c}}" [(ngModel)]="Question.answer">
+      <label class="form-check-label" for="answerC">C</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="correctAnswer" id="answerD" value="{{Question.d}}" [(ngModel)]="Question.answer">
+      <label class="form-check-label" for="answerD">D</label>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-custom" (click)="addQuestion()">Add Question</button>
+  </div>
+
+</body>
+</html>

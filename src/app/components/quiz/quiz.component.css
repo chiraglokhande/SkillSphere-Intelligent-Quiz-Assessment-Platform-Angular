@@ -1,0 +1,54 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* Custom Card Styling */
+.card {
+  width: 600px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  padding: 25px;
+  text-align: center;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+.option input {
+  margin-right: 10px;
+}
+.option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+.option.selected {
+  background: white !important;
+  color: black !important;
+  transform: scale(1.05);
+}
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

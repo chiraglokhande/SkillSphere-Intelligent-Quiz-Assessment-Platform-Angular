@@ -1,0 +1,38 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkillSphere - Quiz Selection</title>
+
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container main-container">
+        <div class="row justify-content-between">
+            <!-- Left Section - Quiz List -->
+            <div class="col-md-7 left-section">
+                <h3>Select a Course</h3>
+                <div class="row mt-3">
+                    <div class="col-md-6" *ngFor="let item of quiztitle">
+                        <div class="course-item" [routerLink]="['/add-questions',item]">{{ item | uppercase }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section - Create Quiz (Aligned Right) -->
+            <div class="col-md-4 right-section">
+                <h3>Create a New Quiz</h3>
+                <p>Enter the quiz title and start adding questions.</p>
+                <input type="text" class="form-control" placeholder="Enter Quiz Title" [(ngModel)]="title">
+                <button class="btn btn-primary mt-3" (click)="addTitle()">Add Quiz</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

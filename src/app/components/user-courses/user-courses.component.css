@@ -1,0 +1,69 @@
+/* Beautiful Gradient Background */
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+}
+
+/* Card Styling */
+.card {
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 15px;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Card Title */
+.card-body h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #203a43;
+}
+
+/* Button Styling */
+.card-body .btn {
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-body .btn:hover {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  transform: scale(1.05);
+}
+
+/* Roadmap Section */
+.mt-4 {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-body h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-body .btn {
+    padding: 8px 15px;
+  }
+}

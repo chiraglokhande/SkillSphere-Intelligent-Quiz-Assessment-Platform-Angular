@@ -1,0 +1,39 @@
+  /* Background Styling */
+  body {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Card Styling */
+.card {
+    width: 350px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary {
+    background: #ff6b6b;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+.btn-primary:hover {
+    background: #d43f3f;
+}

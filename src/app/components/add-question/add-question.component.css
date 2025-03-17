@@ -1,0 +1,79 @@
+  /* Blue Gradient Background */
+  body {
+    background: linear-gradient(135deg, #001f3f, #007bff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Glassmorphism Card */
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Title Styling */
+  .card h2 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00d4ff;
+  }
+
+  /* Input & Label Styling */
+  label {
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid #00d4ff;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Radio Button Styling */
+  .form-check-input {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+  }
+
+  .form-check-input:checked {
+    background-color: #00d4ff;
+    border-color: #00d4ff;
+  }
+
+  /* Button Styling */
+  .btn-custom {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .btn-custom:hover {
+    background: linear-gradient(45deg, #0056b3, #0096ff);
+    transform: scale(1.05);
+  }

@@ -1,0 +1,41 @@
+<app-admin-menu></app-admin-menu>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="card p-4 shadow-lg">
+      <h4 class="text-center mb-3">Edit User</h4>
+
+      <form (ngSubmit)="updateUser()"> <!-- ✅ Use (ngSubmit) to prevent reload -->
+          <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required [(ngModel)]="user.firstName" name="firstName">
+          </div>
+          <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required [(ngModel)]="user.lastName" name="lastName">
+          </div>
+          <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Choose a username" required [(ngModel)]="user.username" name="username" disabled="username">
+          </div>
+          <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter password" required [(ngModel)]="user.password" name="password">
+          </div>
+          <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* Dashboard Container */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 50px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient Text for Welcome Heading */
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #ffdd57, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Dashboard Card */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Styling (Sleek & Adaptive) */
+.dashboard-img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dashboard-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons with Neon Glow */
+.dashboard-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
+}
+
+.dashboard-btn:hover {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  box-shadow: 0 5px 20px rgba(255, 75, 43, 0.5);
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    text-align: center;
+    padding: 40px 15px;
+  }
+
+  .dashboard-img {
+    max-width: 75%;
+  }
+
+  .gradient-text {
+    font-size: 2rem;
+  }
+}

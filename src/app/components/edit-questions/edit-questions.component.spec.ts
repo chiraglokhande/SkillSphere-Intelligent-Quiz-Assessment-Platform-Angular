@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { EditQuestionsComponent } from './edit-questions.component';
+
+describe('EditQuestionsComponent', () => {
+  let component: EditQuestionsComponent;
+  let fixture: ComponentFixture<EditQuestionsComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [EditQuestionsComponent]
+    });
+    fixture = TestBed.createComponent(EditQuestionsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,39 @@
+<app-home-menu></app-home-menu>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkillSphere - Elite Quiz</title>
+
+  </head>
+  <body>
+
+    <!-- Quiz Section -->
+    <div class="card p-4 shadow-lg">
+      <h4 class="text-center mb-3">Elite Quiz Challenge</h4>
+      <p class="text-center">Prove your knowledge by answering the question
+        before time runs out!</p>
+
+      <div class="timer" id="timer">Time Left: 30s</div>
+
+      <h5 class="mb-3">Which programming language is known as the
+        "mother of all languages"?</h5>
+      <div class="d-grid gap-2">
+        <label class="option"><input type="checkbox"
+            onclick="selectAnswer(this)"> A) Python</label>
+        <label class="option"><input type="checkbox"
+            onclick="selectAnswer(this)"> B) C</label>
+        <label class="option"><input type="checkbox"
+            onclick="selectAnswer(this)"> C) Assembly</label>
+        <label class="option"><input type="checkbox"
+            onclick="selectAnswer(this)"> D) Java</label>
+      </div>
+      <div class="d-grid mt-3">
+        <button class="btn btn-primary" onclick="submitAnswer()">Submit
+          Answer</button>
+      </div>
+    </div>
+
+  </body>
+</html>

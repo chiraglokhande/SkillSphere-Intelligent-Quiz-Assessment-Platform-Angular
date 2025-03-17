@@ -1,0 +1,26 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Quiz</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Add a New Quiz</h2>
+        <p>Enter the title for your quiz and click "Add Quiz" to proceed.</p>
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Quiz Title</label>
+            <input type="text" id="title" class="form-control" placeholder="Enter quiz title" [(ngModel)]="title" required>
+        </div>
+
+        <button class="btn btn-primary" (click)="addTitle()">Add Quiz</button>
+    </div>
+
+
+</body>
+</html>

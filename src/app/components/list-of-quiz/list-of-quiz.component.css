@@ -1,0 +1,91 @@
+/* Full Page Gradient Background */
+body {
+  background: linear-gradient(135deg, #0f4c75, #3282b8);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+.main-container {
+  padding-top: 80px; /* Space from Navbar */
+  min-height: 90vh;
+}
+
+/* Sections */
+.left-section, .right-section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Spacing between sections */
+.left-section {
+  margin-right: 50px; /* Extra padding between sections */
+}
+
+/* Course Items Grid (2 Columns) */
+.course-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.course-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Input Field */
+input.form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+/* Smaller Add Quiz Button */
+.btn-primary {
+  background: #1b262c;
+  border: none;
+  padding: 8px 16px; /* Smaller size */
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0f4c75;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-container {
+      padding-top: 50px;
+
+  }
+
+  .left-section, .right-section {
+      margin-bottom: 20px;
+
+  }
+
+  .course-item {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}

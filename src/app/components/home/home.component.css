@@ -1,0 +1,60 @@
+body {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Custom Navbar Styling */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Buttons Styling */
+.btn-custom {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+.btn-outline-light:hover {
+  background: #fff;
+  color: #000;
+}
+.btn-primary {
+  background: #ff6b6b;
+  border: none;
+}
+.btn-primary:hover {
+  background: #d43f3f;
+}
+
+/* Content Styling */
+.content {
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Image */
+.img-fluid {
+  max-width: 50%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}

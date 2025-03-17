@@ -1,0 +1,49 @@
+<app-user-menu></app-user-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Quiz {{ title |uppercase }}</h2>
+
+
+    <div *ngFor="let q of questions; let i = index" class="question-box">
+      <p><strong>Q{{ i + 1 }}: {{ q.question | titlecase }}</strong></p>
+
+      <div class="options">
+        <label>
+          <input type="radio" name="question{{ i }}" value="{{q.a}}" [(ngModel)]="selectedAnswers[i]">
+          A: {{ q.a }}
+        </label>
+        <label>
+          <input type="radio" name="question{{ i }}" value="{{q.b}}" [(ngModel)]="selectedAnswers[i]">
+          B: {{ q.b }}
+        </label>
+        <label>
+          <input type="radio" name="question{{ i }}" value="{{q.c}}" [(ngModel)]="selectedAnswers[i]">
+          C: {{ q.c }}
+        </label>
+        <label>
+          <input type="radio" name="question{{ i }}" value="{{q.d}}" [(ngModel)]="selectedAnswers[i]">
+          D: {{ q.d }}
+        </label>
+      </div>
+    </div>
+
+    <button (click)="submitQuiz()">Submit Quiz</button>
+  </div>
+
+  <!-- 🔥 Popup Box -->
+  <div class="overlay" *ngIf="showPopup"></div>
+  <div class="popup" *ngIf="showPopup">
+    <h2>Your Score:</h2>
+    <p>{{ marks }} / {{ questions.length }}</p>
+    <button (click)="closePopup()">Close</button>
+  </div>
+
+</body>
+</html>
