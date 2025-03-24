@@ -22,20 +22,28 @@ this.getAll()
 
 getAll() {
   this.user.getData().subscribe(
-    (res) => {
+    (res: any[]) => {
       this.course = res;
 
     });
   }
-
-  getCourses(id:any)
-    {
-this.id=id;
-this.selected=this.course.find(course=>course.id==this.id);
-this.roadmaptemp=this.selected.roadmap;
-this.durationtemp=this.selected.duration;
-
+  getCourses(id: any) {
+    this.id = id;
+    this.selected = this.course.find(course => course.id == this.id);
+  
+    if (this.selected) {
+      if (typeof this.selected.roadmap === 'string') {
+        // Convert roadmap string into an array, splitting by new lines
+        this.roadmaptemp = this.selected.roadmap.split('\n').map((line: string) => line.trim()).filter((line: string) => line !== '');
+      } else {
+        // If roadmap is already an array, use it directly
+        this.roadmaptemp = this.selected.roadmap;
+      }
+  
+      this.durationtemp = this.selected.duration;
     }
+  }
+  
 
 
 }
